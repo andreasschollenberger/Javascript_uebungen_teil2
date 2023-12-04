@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var choices = ['red', 'orange', 'pink', 'yellow'];
+        for (var i = 0; i < choices.length; i++) {
+            console.log('My #' + (i + 1) + ' choise is ' + choices[i]);
+        } 
+
+        for  (var i = 0; i < choices.lenght; i++) {
+            var choiceNum = i + 1;
+            var choiceNumSuffix;
+            if (choiceNum == 1) {
+                choiceNumSuffix = 'st';
+            }   else if (choiceNum == 2) {
+                choiceNumSuffix = 'nd';
+            }   else if (choiceNum == 3) {
+                chioceNumSuffix == 'rd';
+            }   else {
+                chioceNumSuffix = 'th';
+            }
+            console.log('My ' + choiceNum + chocenNunSuffix + ' choice is ' + choices[i]);
+        }
+    </script>
+</body>
+</html>

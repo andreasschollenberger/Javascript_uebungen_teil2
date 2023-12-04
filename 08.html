@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var wordLetters     = ['G', '0', 'A', 'T'];
+        var guessedLetters  = ['_', '_', '_', '_'];
+
+        function guessLetter(letter) {
+            var goodGuess = false;
+            var moreToGuess = false;
+            for (var i = 0; i < wordLetters.length; i++) {
+                if (wordLetters[i] == letter) {
+                    guessedLetters[i] = letter;
+                    goodGuess = true;
+                }
+                if (guessedLetters[i] == '_') {
+                    moreToGuess = true;
+                }
+            }
+                if (goodGuess) {
+                    console.log('Yay, you found a letter!');
+                    console.log(guessedLetters.join(''));
+                    if (!moreToGuess) {
+                        console.log('YOU WON!');
+                    }
+                }   else {
+                    console.log('oh noes, thats not right!');
+
+                }
+            }
+
+            guessLetter('G');
+            guessLetter('I');
+            guessLetter('O');
+            guessLetter('A');
+            guessLetter('T');
+        
+    </script>
+</body>
+</html>
